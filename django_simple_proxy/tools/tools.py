@@ -1,3 +1,4 @@
+from typing import Optional
 import requests
 import time
 from logging import getLogger
@@ -13,7 +14,7 @@ from requests.adapters import HTTPAdapter, Retry
 logger = getLogger(__name__)
 
 
-def random_proxy():
+def random_proxy() -> Optional[str]:
     obj = Proxy.objects.random()
     return obj.url if obj else None
 

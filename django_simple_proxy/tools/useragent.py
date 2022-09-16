@@ -25,5 +25,5 @@ _agents = [
 ]
 
 
-def random_user_agent():
+def random_user_agent() -> str:
     return choice(_agents)

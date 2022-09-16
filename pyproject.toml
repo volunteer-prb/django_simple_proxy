@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django_simple_proxy"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Alex Polev <apolevki09@gmail.com>"]
 repository = 'https://github.com/volunteer-prb/django_simple_proxy'
