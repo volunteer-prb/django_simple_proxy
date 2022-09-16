@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('url', models.CharField(max_length=200, verbose_name='Ссылка на прокси-сервер')),
                 ('enabled', models.BooleanField(blank=True, default=True, verbose_name='Включён')),
                 ('comment', models.TextField(blank=True, default='', verbose_name='Комментарий')),
-                ('check', models.BooleanField(blank=True, default=True, verbose_name='Проверена')),
+                ('is_checked', models.BooleanField(blank=True, default=True, verbose_name='Проверена')),
             ],
             options={
                 'ordering': ['url'],

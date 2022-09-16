@@ -7,7 +7,7 @@ class Proxy(models.Model):
     url = models.CharField(verbose_name="Ссылка на прокси-сервер", max_length=200)
     enabled = models.BooleanField(verbose_name="Включён", default=True, blank=True)
     comment = models.TextField(verbose_name="Комментарий", blank=True, default="")
-    check = models.BooleanField(verbose_name="Проверена", default=True, blank=True)
+    is_checked = models.BooleanField(verbose_name="Проверена", default=True, blank=True)
 
     objects = ProxyQueryset.as_manager()
 

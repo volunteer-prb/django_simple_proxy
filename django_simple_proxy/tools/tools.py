@@ -22,7 +22,8 @@ def random_proxy() -> Optional[str]:
 def _abstract_request_proxy(url: str, method, **kwargs):
     proxies = Proxy.objects.all().values_list('url', flat=True)
 
-    for retry in range(settings.PROXY_RETRIES):
+    retries = getattr(settings, 'PROXY_RETRIES', 3)
+    for retry in range(retries):
         if len(proxies) == 0:
             break
 
