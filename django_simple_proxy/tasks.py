@@ -13,10 +13,10 @@ def check_proxy_task(queryset=None):
         if not check_proxy(proxy):
             logger.error(f"PROXY DEAD {proxy.url}")
             dead_proxy.append(proxy.url)
-            proxy.check = False
+            proxy.is_checked = False
             proxy.save(update_fields=["check"])
         else:
-            proxy.check = True
+            proxy.is_checked = True
             proxy.save(update_fields=["check"])
 
     if dead_proxy:

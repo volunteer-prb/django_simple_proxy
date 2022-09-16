@@ -6,4 +6,4 @@ from . import models
 
 @admin.register(models.Proxy)
 class ProxyAdmin(ImportExportModelAdmin):
-    list_display = ("url", "enabled", "check", "comment")
+    list_display = ("url", "enabled", "is_checked", "comment")
