@@ -1,4 +1,3 @@
-from django_rq import job
 from .models import Proxy
 from .tools.check import check_proxy
 from logging import getLogger
@@ -6,7 +5,6 @@ from logging import getLogger
 logger = getLogger(__name__)
 
 
-@job('high', timeout=60 * 60 * 10, result_ttl=1)  # 10 hours timeout
 def check_proxy_task(queryset=None):
     dead_proxy = []
 
